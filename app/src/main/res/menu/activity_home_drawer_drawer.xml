@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/navigation_home1"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="@string/title_home" />
+
+        <item
+            android:id="@+id/navigation_prototype1"
+            android:icon="@drawable/ic_assignment_ind_black_24dp"
+            android:title="@string/title_tips" />
+
+        <item
+            android:id="@+id/navigation_setting1"
+            android:icon="@drawable/ic_settings_black_24dp"
+            android:title="@string/title_setting" />
+
+
+    </group>
+</menu>
