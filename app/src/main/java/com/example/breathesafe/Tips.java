@@ -25,7 +25,10 @@ import android.widget.Toast;
 public class Tips extends AppCompatActivity{
 
     private TextView mTextMessage;
-
+    private Button btn_1;
+    private Button btn_2;
+    private Button btn_3;
+    private Button btn_4;
 
 
     @Override
@@ -60,5 +63,57 @@ public class Tips extends AppCompatActivity{
 
     private void init() {
 
+        btn_1=findViewById(R.id.Temperature);
+        btn_2=findViewById(R.id.Humidity);
+        btn_3=findViewById(R.id.Pressure);
+        btn_4=findViewById(R.id.air);
+
+        btn_1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Tips.this.finish();
+                //跳转到主界面，登录成功的状态传递到 MainActivity 中
+                startActivity(new Intent(Tips.this, Temperature.class));
+
+
+
+            }
+        });
+
+        btn_2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Tips.this.finish();
+                //跳转到主界面，登录成功的状态传递到 MainActivity 中
+                startActivity(new Intent(Tips.this, Hum.class));
+
+
+
+            }
+        });
+
+        btn_3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Tips.this.finish();
+                //跳转到主界面，登录成功的状态传递到 MainActivity 中
+                startActivity(new Intent(Tips.this, pre.class));
+
+
+
+            }
+        });
+
+        btn_4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Tips.this.finish();
+                //跳转到主界面，登录成功的状态传递到 MainActivity 中
+                startActivity(new Intent(Tips.this, aqi.class));
+
+
+
+            }
+        });
     }
 }

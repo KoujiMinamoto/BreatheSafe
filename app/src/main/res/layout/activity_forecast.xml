@@ -1,54 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:id="@+id/activity_forecast"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="133dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="80dp"
+            android:text="Choose your suburb"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="140dp"
+            android:layout_height="31dp"
+            android:layout_marginStart="248dp"
+            android:layout_marginLeft="448dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginRight="50dp"
+            android:spinnerMode="dropdown"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="1000px"
+            android:layout_height="800px"
+            android:layout_centerInParent="true"
+            android:background="@color/white"
+            android:gravity="center">
+
+
+            <com.example.breathesafe.DashBoard
+                android:id="@+id/dash"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="133dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="80dp"
-        android:text="Choose your suburb"
+        android:id="@+id/showairq"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="190dp"
+        android:layout_marginLeft="190dp"
+        android:layout_marginTop="550dp"
+        android:background="#009688"
+        android:drawableTop="@drawable/pm"
+        android:gravity="center"
+        android:textColor="@color/colorAccent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/showPressure"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp"
+        android:background="#FF9800"
+        android:drawableTop="@drawable/pre"
+        android:gravity="center"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showtemperature" />
 
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="140dp"
-        android:layout_height="31dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginLeft="48dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginRight="50dp"
-        android:spinnerMode="dropdown"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
+    <TextView
+        android:id="@+id/showHumidity"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="470dp"
+        android:background="@color/colorPrimary"
+        android:drawableTop="@drawable/hum"
+        android:gravity="center"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintStart_toEndOf="@+id/showtemperature"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:layout_width="413dp"
-        android:layout_height="250dp"
-        android:layout_marginTop="80dp"
-        android:background="@drawable/side_bar"
-        android:gravity="center_horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
+
+    <TextView
+        android:id="@+id/showtemperature"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="470dp"
+        android:background="#F44336"
+        android:drawableTop="@drawable/ic_info_outline_black_24dp"
+        android:gravity="center"
+        android:textColor="@color/colorAccent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2">
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <com.github.iron.chart.dashboard.DashboardView1
-            android:id="@+id/dp"
-            android:layout_width="250dp"
-            android:layout_height="198dp"
-            android:layout_marginTop="20dp" />
+    <TextView
+        android:id="@+id/showadress"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="115dp"
+        android:layout_marginLeft="115dp"
+        android:layout_marginTop="200dp"
+        android:background="@color/white"
+        android:gravity="center"
 
-    </LinearLayout>
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </android.support.constraint.ConstraintLayout>

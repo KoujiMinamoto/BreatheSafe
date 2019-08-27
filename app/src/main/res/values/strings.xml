@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">BreatheSafe</string>
     <string name="title_home">Home</string>
+    <string name="title_for">Forecast</string>
     <string name="title_tips">Know your asthma</string>
     <string name="title_setting">Setting</string>
     <string name="title_activity_main2">Main2Activity</string>

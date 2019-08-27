@@ -2,9 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.breathesafe">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/logo"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -14,9 +15,23 @@
             android:label="@string/title_activity_home_drawer"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Forecast"
+            android:label="@string/title_for"
             android:parentActivityName=".MainActivity"/>
         <activity android:name=".Tips"
+            android:label="@string/title_tips"
             android:parentActivityName=".MainActivity"/>
+        <activity android:name=".Temperature"
+            android:label="Temperature"
+            android:parentActivityName=".Tips"/>
+        <activity android:name=".aqi"
+            android:label="Air Quality"
+            android:parentActivityName=".Tips"/>
+        <activity android:name=".pre"
+            android:label="Pressure"
+            android:parentActivityName=".Tips"/>
+        <activity android:name=".Hum"
+            android:label="Humidity"
+            android:parentActivityName=".Tips"/>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name">
