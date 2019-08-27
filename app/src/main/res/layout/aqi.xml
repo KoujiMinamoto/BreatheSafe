@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="336dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginLeft="37dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginRight="37dp"
+        android:text="Asthma Prevalence in Victoria vs Air Quality"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:textStyle="normal|bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="302dp"
+        android:layout_height="256dp"
+        android:layout_marginStart="57dp"
+        android:layout_marginLeft="57dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginRight="57dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:srcCompat="@drawable/qar" />
+
+    <me.codeboy.android.aligntextview.AlignTextView
+        android:id="@+id/textView8"
+        android:layout_width="301dp"
+        android:layout_height="241dp"
+        android:layout_marginStart="57dp"
+        android:layout_marginLeft="57dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginRight="57dp"
+        android:text="•	Five major air pollutants will impact air quality: ground-level ozone, particle pollution, carbon monoxide, sulfur dioxide, and nitrogen dioxide.\n
+•	PM2.5 is a mixture of small particles and droplets from automobile exhaust, coal and wood combustion, and industrial activities.\n
+•	The small size of PM2.5 makes it easy to breathe in and deep into the respiratory tract.\n
+•	You may be spending more time in the open environment at your work and may breathe more air, which can make you more susceptible to these ambient air pollutants."
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+</android.support.constraint.ConstraintLayout>
