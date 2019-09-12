@@ -9,50 +9,108 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <com.youth.banner.Banner
+        android:id="@+id/carousel"
+        android:layout_width="404dp"
+        android:layout_height="216dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </com.youth.banner.Banner>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="406dp"
+        android:layout_height="507dp"
+        android:layout_margin="5dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/carousel" />
 
     <Button
         android:id="@+id/forecast"
-        android:layout_width="150dp"
+        android:layout_width="170dp"
         android:layout_height="101dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="548dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="228dp"
         android:layout_marginBottom="60dp"
-        android:background="@color/colorPrimary"
+        android:background="@color/white"
         android:drawableTop="@drawable/ic_timeline_white_24dp"
         android:paddingTop="20dp"
         android:text="Forecast"
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/colorPrimary"
         app:layout_constraintBottom_toTopOf="@+id/nav_view"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/symptoms"
+        android:layout_width="170dp"
+        android:layout_height="101dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="60dp"
+        android:background="@color/white"
+        android:drawableTop="@drawable/ic_timeline_white_24dp"
+        android:paddingTop="20dp"
+        android:text="Symptoms"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/nav_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/forecast"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/forecast4"
+        android:layout_width="170dp"
+        android:layout_height="101dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="60dp"
+        android:background="@color/white"
+        android:drawableTop="@drawable/ic_timeline_white_24dp"
+        android:paddingTop="20dp"
+        android:text="Medication"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/nav_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/symptoms"
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/tips"
-        android:layout_width="150dp"
+        android:layout_width="170dp"
         android:layout_height="101dp"
-        android:layout_marginStart="170dp"
-        android:layout_marginLeft="170dp"
-        android:layout_marginTop="548dp"
-        android:layout_marginBottom="60dp"
-        android:background="@color/colorPrimary"
+        android:layout_marginTop="228dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/white"
         android:drawableTop="@drawable/ic_info_outline_black_24dp"
         android:paddingTop="20dp"
         android:text="Know your asthma"
-        android:textColor="@color/colorAccent"
-        app:layout_constraintBottom_toTopOf="@+id/nav_view"
-        app:layout_constraintStart_toStartOf="@+id/forecast"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/actionplan"
+        android:layout_width="170dp"
+        android:layout_height="101dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/white"
+        android:drawableTop="@drawable/ic_info_outline_black_24dp"
+        android:paddingTop="20dp"
+        android:text="Action Plan"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tips" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="406dp"
-        android:layout_height="642dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/back" />
 
 </android.support.constraint.ConstraintLayout>

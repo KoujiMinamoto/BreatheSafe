@@ -11,7 +11,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Scanner;
 public class WeathersAPI {
-    private static final String API_KEY = "/?token=c30601995431f0d27e382486737f74714b87c4be";
+    private static final String API_KEY = "/?token=a5e02f669ccb7164c28ac9c093d25917bec265c5";
     private static final String USER_AGENT = "Mozilla/5.0";
 
     public static String search(String keyword) {

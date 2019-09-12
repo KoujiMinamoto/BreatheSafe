@@ -13,6 +13,10 @@ import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.animation.OvershootInterpolator;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+
+
 
 public class DashBoard  extends View{
 
@@ -138,11 +142,12 @@ public class DashBoard  extends View{
         float swidth = textPaint.measureText(String.valueOf(_per));
         //计算偏移量 是的数字和百分号整体居中显示
         swidth =   (swidth - (swidth + 22) / 2);
-
+        double pp = per;
+        String percent = formattedDecimalToPercentage(pp);
 
         canvas.translate( swidth , 0);
-       // canvas.drawText("" + _per, 0, 0, textPaint);
-        canvas.drawText("" , 0, 0, textPaint);
+        canvas.drawText(percent, 90, 0, textPaint);
+        //canvas.drawText("" , 0, 0, textPaint);
 
         textPaint.setTextSize(30);
         textPaint.setTextAlign(Paint.Align.LEFT);
@@ -198,12 +203,12 @@ public class DashBoard  extends View{
         //绘制刻度和百分比
         for (int i = 0 ; i <= count ; i++){
 
-            if (i % 2 == 0 ) {
+            if (i % 3 == 0 ) {
                 //canvas.drawText(String.valueOf((i) * 0.5), 0, y - 20f, tmpPaint);
-                if(i/2 ==0){canvas.drawText("Low", 0, y - 20f, tmpPaint);}
-                else if(i/2 ==2){canvas.drawText("Medium", 0, y - 20f, tmpPaint);}
-                else if(i/2 == 4){canvas.drawText("High", 0, y - 20f, tmpPaint);}
-                else if(i/2 == 6){canvas.drawText("Danger", 0, y - 20f, tmpPaint);}
+                if(i/3 ==0){canvas.drawText("Low", 0, y - 20f, tmpPaint);}
+                else if(i/3 ==2){canvas.drawText("Medium", 0, y - 20f, tmpPaint);}
+                else if(i/3 == 4){canvas.drawText("High", 0, y - 20f, tmpPaint);}
+                //  else if(i/2 == 6){canvas.drawText("Danger", 0, y - 20f, tmpPaint);}
                 else
                 canvas.drawText("", 0, y - 20f, tmpPaint);
             }
@@ -332,6 +337,15 @@ public class DashBoard  extends View{
         va.start();
 
     }
+    private static String formattedDecimalToPercentage(double decimal)
+    {
+        //获取格式化对象
+        NumberFormat nt = NumberFormat.getPercentInstance();
+        //设置百分数精确度2即保留两位小数
+        nt.setMinimumFractionDigits(2);
+        return nt.format(decimal);
+    }
+
 
 }
 
