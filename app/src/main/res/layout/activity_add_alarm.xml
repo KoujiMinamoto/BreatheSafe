@@ -25,6 +25,40 @@
         />
 
 
+    <EditText
+        android:id="@+id/et_dosage"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginRight="35dp"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:hint="Dosage(ex 1)"
+        android:paddingLeft="8dp"
+        android:singleLine="true"
+        android:textColor="#000000"
+        android:textColorHint="#a3a3a3"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/et_form"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginRight="35dp"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:hint="Form(ex liquid)"
+        android:paddingLeft="8dp"
+        android:singleLine="true"
+        android:textColor="#000000"
+        android:textColorHint="#a3a3a3"
+        android:textSize="14sp" />
+
     <TextView
         android:id="@+id/date_tv"
         android:layout_width="match_parent"

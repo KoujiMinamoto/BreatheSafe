@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    >
+
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="350dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="User Info"
+        android:background="#4caf50"
+        android:textColor="@color/white"
+        />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="350dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="Add your information below"
+        android:textColor="@color/colorPrimary"
+
+        />
+
+    <EditText
+        android:id="@+id/et_fname"
+        android:layout_width="278dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="left"
+
+        android:hint="First Name"
+
+        tools:layout_editor_absoluteX="98dp"
+        tools:layout_editor_absoluteY="89dp"
+        />
+
+    <EditText
+        android:id="@+id/et_lname"
+        android:layout_width="278dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="left"
+
+        android:hint="Last Name"
+
+        tools:layout_editor_absoluteX="83dp"
+        tools:layout_editor_absoluteY="158dp"
+        android:tag="Date of berth"/>
+
+
+
+
+    <EditText
+        android:id="@+id/et_email"
+        android:layout_width="278dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="left"
+
+        android:hint="Email"
+
+        tools:layout_editor_absoluteX="83dp"
+        tools:layout_editor_absoluteY="158dp"
+        />
+
+    <EditText
+        android:id="@+id/et_ec_name"
+        android:layout_width="278dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="left"
+
+        android:hint="emergency contact name"
+
+        tools:layout_editor_absoluteX="83dp"
+        tools:layout_editor_absoluteY="158dp"
+        android:tag="Weight"/>
+
+
+    <EditText
+        android:id="@+id/et_ec_workloc"
+        android:layout_width="278dp"
+        android:layout_height="wrap_content"
+
+        android:hint="emergency contact worklocation"
+
+        android:gravity="left"/>
+
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="Choose your organisation"
+        android:textColor="@color/colorPrimary"
+
+        />
+
+    <Spinner
+        android:id="@+id/spinner_o"
+        android:layout_width="match_parent"
+        android:layout_height="38dp" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="Choose your department"
+        android:textColor="@color/colorPrimary"
+
+        />
+
+    <Spinner
+        android:id="@+id/spinner_d"
+        android:layout_width="match_parent"
+        android:layout_height="38dp" />
+
+    <TextView
+        android:id="@+id/textView16"
+
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        android:text=" " />
+
+    <Button
+        android:id="@+id/set_btnforuser"
+        android:layout_width="153dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Submit!"
+        android:textAllCaps="false"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/white"/>
+
+</LinearLayout>
+</ScrollView>

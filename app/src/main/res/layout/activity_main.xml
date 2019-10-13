@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+<android.support.constraint.ConstraintLayout
     android:id="@+id/container"
     android:gravity="center"
     android:orientation="vertical"
@@ -30,10 +34,10 @@
 
     <Button
         android:id="@+id/forecast"
-        android:layout_width="170dp"
-        android:layout_height="101dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
+        android:layout_width="160dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
         android:layout_marginTop="228dp"
         android:layout_marginBottom="60dp"
         android:background="@color/white"
@@ -47,70 +51,70 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/symptoms"
-        android:layout_width="170dp"
-        android:layout_height="101dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="60dp"
+        android:id="@+id/forecast2"
+        android:layout_width="160dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
         android:background="@color/white"
-        android:drawableTop="@drawable/ic_timeline_white_24dp"
-        android:paddingTop="20dp"
-        android:text="Symptoms"
-        android:textColor="@color/colorPrimary"
-        app:layout_constraintBottom_toTopOf="@+id/nav_view"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/forecast"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <Button
-        android:id="@+id/forecast4"
-        android:layout_width="170dp"
-        android:layout_height="101dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="60dp"
-        android:background="@color/white"
-        android:drawableTop="@drawable/ic_timeline_white_24dp"
+        android:drawableTop="@drawable/firstaidkit"
         android:paddingTop="20dp"
         android:text="Medication"
         android:textColor="@color/colorPrimary"
-        app:layout_constraintBottom_toTopOf="@+id/nav_view"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/symptoms"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/forecast" />
 
     <Button
         android:id="@+id/tips"
-        android:layout_width="170dp"
-        android:layout_height="101dp"
-        android:layout_marginTop="228dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
+        android:layout_width="160dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:background="@color/white"
         android:drawableTop="@drawable/ic_info_outline_black_24dp"
         android:paddingTop="20dp"
         android:text="Know your asthma"
         android:textColor="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/actionplan" />
 
     <Button
         android:id="@+id/actionplan"
-        android:layout_width="170dp"
-        android:layout_height="101dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
+        android:layout_width="160dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="228dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
         android:background="@color/white"
-        android:drawableTop="@drawable/ic_info_outline_black_24dp"
+        android:drawableTop="@drawable/writing"
         android:paddingTop="20dp"
         android:text="Action Plan"
         android:textColor="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/emergency"
+        android:layout_width="268dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@color/white"
+        android:drawableTop="@drawable/ic_help_black_24dp"
+        android:gravity="center_horizontal"
+        android:paddingTop="20dp"
+        android:text="How are you feeling?"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tips" />
 
 
+
 </android.support.constraint.ConstraintLayout>
+</ScrollView>

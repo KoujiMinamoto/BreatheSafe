@@ -11,7 +11,24 @@ public class AlarmDB extends LitePalSupport {
     private int hourNum;
     private int minNum;
     private int cycleNum;
+    private String Dosage;
+    private String Form;
 
+    public String getDosage() {
+        return Dosage;
+    }
+
+    public String getForm() {
+        return Form;
+    }
+
+    public void setDosage(String dosage) {
+        Dosage = dosage;
+    }
+
+    public void setForm(String form) {
+        Form = form;
+    }
 
     public String getAlarmName() {
         return alarmName;

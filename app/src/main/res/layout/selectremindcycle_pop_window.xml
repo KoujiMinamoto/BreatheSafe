@@ -19,12 +19,12 @@
             android:id="@+id/tv_drugcycle_once"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:drawableRight="@null"
-            android:text="只响一次"
+            android:text="One Time"
             android:textColor="@color/black"
-            android:textSize="20sp"/>
+            android:textSize="20sp" />
 
         <TextView style="@style/horizontal_line_style"/>
 
@@ -32,12 +32,12 @@
             android:id="@+id/tv_drugcycle_0"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:drawableRight="@null"
-            android:text="每天"
+            android:text="Every Day"
             android:textColor="@color/black"
-            android:textSize="20sp"/>
+            android:textSize="20sp" />
 
         <TextView style="@style/horizontal_line_style"/>
 

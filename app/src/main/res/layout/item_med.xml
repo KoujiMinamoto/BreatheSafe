@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="80dp"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/layout_public"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
     android:orientation="horizontal">
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="368dp"
         android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="10dp"
-        android:layout_toLeftOf="@+id/switchButton"
+        android:layout_marginRight="-15dp"
+
         android:gravity="center"
         android:orientation="vertical">
 
@@ -24,6 +26,7 @@
             android:gravity="left|center_vertical"
             android:textColor="@color/black"
             android:textSize="18sp" />
+
         <TextView
             android:id="@+id/tv_count"
             android:layout_width="match_parent"
@@ -33,6 +36,7 @@
             android:gravity="left|center_vertical"
             android:textColor="@color/black"
             android:textSize="14sp" />
+
         <TextView
             android:id="@+id/tv_medtime"
             android:layout_width="match_parent"
@@ -42,16 +46,28 @@
             android:gravity="left|center_vertical"
             android:textColor="@color/black"
             android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_dos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/switchButton"
+            android:gravity="left|center_vertical"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/switchButton"
+            android:gravity="left|center_vertical"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
     </LinearLayout>
 
-
-    <Switch
-        android:id="@+id/switchButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="10dp" />
 
 </RelativeLayout>

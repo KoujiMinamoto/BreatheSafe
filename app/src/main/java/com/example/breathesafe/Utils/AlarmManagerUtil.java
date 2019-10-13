@@ -9,15 +9,20 @@ import android.os.Build;
 import java.util.Calendar;
 
 public class AlarmManagerUtil {
-    public static final String ALARM_ACTION = "com.loonggg.alarm.clock";
+    public static final String ALARM_ACTION = "com.example.breathesafe.ClockAlarmActivity";
 
     public static void setAlarmTime(Context context, long timeInMillis, Intent intent) {
         AlarmManager am = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
         PendingIntent sender = PendingIntent.getBroadcast(context, intent.getIntExtra("id", 0),
                 intent, PendingIntent.FLAG_CANCEL_CURRENT);
         int interval = (int) intent.getLongExtra("intervalMillis", 0);
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+//            am.setWindow(AlarmManager.RTC_WAKEUP, timeInMillis, interval, sender);
+//        }
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            am.setWindow(AlarmManager.RTC_WAKEUP, timeInMillis, interval, sender);
+            am.setWindow(AlarmManager.RTC_WAKEUP, timeInMillis, 100, sender);
+        }else {
+            am.setRepeating(AlarmManager.RTC_WAKEUP, timeInMillis, interval, sender);
         }
     }
 
@@ -63,6 +68,7 @@ public class AlarmManagerUtil {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             am.setWindow(AlarmManager.RTC_WAKEUP, calMethod(week, calendar.getTimeInMillis()),
                     intervalMillis, sender);
+            //am.setWindow(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), 100, sender);
         } else {
             if (flag == 0) {
                 am.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), sender);

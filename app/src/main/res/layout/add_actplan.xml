@@ -16,61 +16,48 @@
     >
 
 
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="350dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="Green Zone"
+        android:background="#4caf50"
+        android:textColor="@color/white"
+        />
 
-    <LinearLayout
-        android:layout_width="278dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="350dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="Add your rescue medication"
+        android:textColor="@color/colorPrimary"
 
-        <EditText
-            android:id="@+id/et_firstName"
-            android:layout_width="279dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:ems="10"
-            android:gravity="center"
-            android:hint="First Name"
-            android:inputType="textEmailAddress"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="104dp"
-            tools:layout_editor_absoluteY="35dp" />
-
-        <EditText
-            android:id="@+id/et_lastName"
-            android:layout_width="275dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:ems="10"
-            android:gravity="center"
-            android:hint="Last Name"
-            android:inputType="textEmailAddress"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="104dp"
-            tools:layout_editor_absoluteY="78dp" />
-    </LinearLayout>
-
+        />
 
     <EditText
-        android:id="@+id/et_email"
+        android:id="@+id/et_greenrename"
         android:layout_width="278dp"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:gravity="center"
-        android:inputType="textEmailAddress"
-        android:hint="email"
+        android:gravity="left"
+
+        android:hint="Name"
 
         tools:layout_editor_absoluteX="98dp"
         tools:layout_editor_absoluteY="89dp"
         />
 
     <EditText
-        android:id="@+id/et_dob"
+        android:id="@+id/et_greenredosage"
         android:layout_width="278dp"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:gravity="center"
-        android:inputType="date"
-        android:hint="Date of berth"
+        android:gravity="left"
+
+        android:hint="Dosgae(ex 1)"
+        android:inputType="numberDecimal"
 
         tools:layout_editor_absoluteX="83dp"
         tools:layout_editor_absoluteY="158dp"
@@ -80,83 +67,240 @@
 
 
     <EditText
-        android:id="@+id/et_height"
+        android:id="@+id/et_greenreform"
         android:layout_width="278dp"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:gravity="center"
-        android:inputType="number"
-        android:hint="height(cm)"
+        android:gravity="left"
+
+        android:hint="Form(ex liquid)"
 
         tools:layout_editor_absoluteX="83dp"
         tools:layout_editor_absoluteY="158dp"
         />
 
     <EditText
-        android:id="@+id/et_weight"
+        android:id="@+id/et_greenrefrequency"
         android:layout_width="278dp"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:gravity="center"
-        android:inputType="numberDecimal"
-        android:hint="weight(kg)"
+        android:gravity="left"
+
+        android:hint="Frequency(ex 1/d or 2/d)"
 
         tools:layout_editor_absoluteX="83dp"
         tools:layout_editor_absoluteY="158dp"
         android:tag="Weight"/>
 
 
+    <TextView
+        android:id="@+id/textView123"
+        android:layout_width="350dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="Add your controller medication"
+        android:textColor="@color/colorPrimary"
 
+        />
 
     <EditText
-        android:id="@+id/et_postCode"
+        android:id="@+id/et_greenconname"
         android:layout_width="278dp"
         android:layout_height="wrap_content"
 
-        android:hint="post code"
+        android:hint="Name"
+
+        android:gravity="left"/>
+
+
+    <EditText
+        android:id="@+id/et_greencondosage"
+        android:layout_width="278dp"
+        android:layout_height="wrap_content"
+
+        android:hint="Dosgae(ex 1)"
         android:inputType="numberDecimal"
-        android:gravity="center"/>
-
-
+        android:gravity="left"/>
     <EditText
-        android:id="@+id/et_address"
-        android:layout_width="278dp"
-        android:layout_height="wrap_content"
-
-        android:hint="address"
-        android:gravity="center"/>
-    <EditText
-        android:id="@+id/et_step_mile"
+        android:id="@+id/et_greenconform"
         android:layout_width="277dp"
         android:layout_height="wrap_content"
-        android:hint="steps per mile"
-        android:inputType="numberDecimal"
+        android:hint="Form(ex liquid)"
 
-        android:gravity="center"/>
 
+        android:gravity="left"/>
+
+
+    <EditText
+        android:id="@+id/et_greenconfrequency"
+        android:layout_width="278dp"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:hint="Frequency(ex 1/d or 2/d)"
+
+         />
 
     <TextView
+        android:id="@+id/textView10"
+        android:layout_width="350dp"
+        android:layout_height="30dp"
+        android:background="#ff9800"
+        android:gravity="center"
+        android:text="Yellow Zone"
+        android:textColor="@color/white"/>
 
-        android:layout_width="277dp"
+    <TextView
+        android:id="@+id/textView223"
+        android:layout_width="350dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="Add your rescue medication"
+        android:textColor="@color/colorPrimary"
+
+        />
+
+    <EditText
+        android:id="@+id/et_yellowrename"
+        android:layout_width="278dp"
         android:layout_height="wrap_content"
-        android:text="Level Of Activity" />
+        android:gravity="left"
+        android:hint="Name"
 
+       />
 
+    <EditText
+        android:id="@+id/et_yellowredosage"
+        android:layout_width="278dp"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:hint="Dosgae(ex 1)"
 
-    <Spinner
-            android:id="@+id/sp_loa"
-            android:layout_width="278dp"
-            android:layout_height="wrap_content" />
+        android:inputType="numberDecimal" />
 
+    <EditText
+        android:id="@+id/et_yellowreform"
+        android:layout_width="278dp"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:hint="Form(ex liquid)"
 
+        />
+
+    <EditText
+        android:id="@+id/et_yellowrefrequency"
+        android:layout_width="278dp"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:hint="Frequency(ex 1/d or 2/d)"
+
+        />
+
+    <TextView
+        android:id="@+id/textView1123"
+        android:layout_width="350dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="Add your controller medication"
+        android:textColor="@color/colorPrimary"
+
+        />
+
+    <EditText
+        android:id="@+id/et_yellowconname"
+        android:layout_width="278dp"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:hint="Name"
+
+        />
+
+    <EditText
+        android:id="@+id/et_yellowcondosage"
+        android:layout_width="278dp"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:hint="Dosgae(ex 1)"
+
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/et_yellowconform"
+        android:layout_width="278dp"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:hint="Form(ex liquid)"
+
+         />
+
+    <EditText
+        android:id="@+id/et_yellowconfrequency"
+        android:layout_width="278dp"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:hint="Frequency(ex 1/d or 2/d)"
+
+         />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="350dp"
+        android:layout_height="30dp"
+        android:background="@color/red"
+        android:gravity="center"
+        android:text="Red Zone"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/textView213"
+        android:layout_width="350dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="Add your rescue medication"
+        android:textColor="@color/colorPrimary"
+
+        />
+    <EditText
+        android:id="@+id/et_redrename"
+        android:layout_width="278dp"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:hint="Name"
+
+         />
+    <EditText
+        android:id="@+id/et_redredosage"
+        android:layout_width="278dp"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:hint="Dosgae(ex 1)"
+
+        android:inputType="numberDecimal" />
+    <EditText
+        android:id="@+id/et_redreform"
+        android:layout_width="278dp"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:hint="Form(ex liquid)"
+
+         />
+    <EditText
+        android:id="@+id/et_redrefrequency"
+        android:layout_width="278dp"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:hint="Frequency(ex 1/d or 2/d)"
+
+         />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/set_btnforact"
         android:layout_width="153dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="Submit!"
-        android:textAllCaps="false"/>
+        android:textAllCaps="false"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/white"/>
 
 </LinearLayout>
 </ScrollView>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    >
+
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="350dp"
+        android:layout_height="30dp"
+        android:background="#4caf50"
+        android:gravity="center"
+        android:text="How are you feeling?(0-9 low to high)"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="350dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="Do you have difficulty in breathing?"
+        android:textColor="@color/colorPrimary"
+
+        />
+
+    <EditText
+        android:id="@+id/et_1"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="left"
+
+        android:hint="0-2(low,medium,high)"
+        android:inputType="numberDecimal"
+
+        tools:layout_editor_absoluteX="83dp"
+        tools:layout_editor_absoluteY="158dp"
+        android:tag="Date of berth"/>
+
+
+    <TextView
+        android:id="@+id/textView123"
+        android:layout_width="350dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="Do you have cough or wheeze?"
+        android:textColor="@color/colorPrimary"
+
+        />
+
+
+    <EditText
+        android:id="@+id/et_2"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+
+        android:hint="0-2(low,medium,high)"
+        android:inputType="numberDecimal"
+        android:gravity="left"/>
+
+
+    <TextView
+        android:id="@+id/textView223"
+        android:layout_width="350dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="Do you feel troubled while speaking?"
+        android:textColor="@color/colorPrimary"
+
+        />
+
+    <EditText
+        android:id="@+id/et_3"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:hint="0-2(low,medium,high)"
+
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/textView1123"
+        android:layout_width="350dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="Are you experiencing chest tightness?"
+        android:textColor="@color/colorPrimary"
+
+        />
+
+    <EditText
+        android:id="@+id/et_4"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:hint="0-2(low,medium,high)"
+
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/textView213"
+        android:layout_width="350dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="Do you have difficulty in working?"
+        android:textColor="@color/colorPrimary"
+
+        />
+
+    <EditText
+        android:id="@+id/et_5"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:hint="0-2(low,medium,high)"
+
+        android:inputType="numberDecimal" />
+
+    <Button
+
+        android:id="@+id/set_btnforno"
+        android:layout_width="153dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Submit!"
+        android:textAllCaps="false"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/white"/>
+
+</LinearLayout>
+</ScrollView>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_public1"
+    android:layout_width="match_parent"
+    android:layout_height="540dp"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="360dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/greenzone"
+            android:layout_width="match_parent"
+            android:layout_height="182dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/gzone"
+                android:layout_width="match_parent"
+                android:layout_height="29dp"
+                android:background="@drawable/bc1"
+                android:text="  Green Zone"
+                android:gravity="center_vertical"
+                android:drawableRight="@drawable/ic_play"
+                android:textColor="@color/white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="146dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="77dp"
+                    android:orientation="vertical">
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp" />
+
+                    <TextView
+                        android:id="@+id/textView15"
+                        android:layout_width="match_parent"
+                        android:layout_height="29dp"
+                        android:text="Your Rescue medication: "
+                        android:textColor="@color/black"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_greenrename"
+                            android:layout_width="294dp"
+                            android:layout_height="match_parent"
+                            android:text="Name" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView17"
+                        android:layout_width="match_parent"
+                        android:layout_height="29dp"
+                        android:text="Your Controller medication: "
+                        android:textColor="@color/black"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_greenconname"
+                            android:layout_width="294dp"
+                            android:layout_height="29dp"
+                            android:text="Name" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/yellowzone"
+            android:layout_width="match_parent"
+            android:layout_height="182dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/yzone"
+                android:layout_width="match_parent"
+                android:layout_height="29dp"
+                android:background="@drawable/bc2"
+                android:text="  Yellow Zone"
+                android:gravity="center_vertical"
+                android:drawableRight="@drawable/ic_play"
+                android:textColor="@color/white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="179dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="77dp"
+                    android:orientation="vertical">
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp" />
+
+                    <TextView
+                        android:id="@+id/textView14"
+                        android:layout_width="match_parent"
+                        android:layout_height="29dp"
+                        android:text="Your Rescue medication: "
+                        android:textColor="@color/black"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="29dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_yellowrename"
+                            android:layout_width="298dp"
+                            android:layout_height="29dp"
+                            android:text="Name" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="91dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView18"
+                        android:layout_width="match_parent"
+                        android:layout_height="29dp"
+                        android:text="Your Controller medication: "
+                        android:textColor="@color/black"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="29dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_yellowconname"
+                            android:layout_width="296dp"
+                            android:layout_height="29dp"
+                            android:text="Name" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/redzone"
+            android:layout_width="match_parent"
+
+            android:layout_height="182dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/rzone"
+                android:layout_width="match_parent"
+                android:layout_height="29dp"
+                android:background="@drawable/bc3"
+                android:text="  Red Zone"
+                android:gravity="center_vertical"
+                android:drawableRight="@drawable/ic_play"
+                android:textColor="@color/white" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="match_parent"
+                android:layout_height="29dp"
+                android:text="Your Rescue medication: "
+                android:textColor="@color/black"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="91dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_redrename"
+                    android:layout_width="297dp"
+                    android:layout_height="match_parent"
+                    android:text="Name" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

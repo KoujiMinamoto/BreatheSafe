@@ -76,7 +76,7 @@ public class RemindActivity extends AppCompatActivity {
         alarmAdapter.setOnItemChildLongClickListener(new BaseQuickAdapter.OnItemChildLongClickListener() {
             @Override
             public boolean onItemChildLongClick(BaseQuickAdapter adapter, View view, int position) {
-                Toast.makeText(RemindActivity.this, "长按点击", Toast.LENGTH_SHORT).show();
+                Toast.makeText(RemindActivity.this, "Test", Toast.LENGTH_SHORT).show();
                 return true;
             }
         });
@@ -86,6 +86,15 @@ public class RemindActivity extends AppCompatActivity {
     public void onViewClicked() {
         Intent intent = new Intent(this, AddAlarmActivity.class);
         startActivityForResult(intent, 0);
+    }
+
+    @OnClick(R.id.floatingButton2)
+    public void onViewClicked1() {
+        LitePal.deleteAll(AlarmDB.class);
+        finish();
+        Intent intent = new Intent(RemindActivity.this, RemindActivity.class);
+        startActivity(intent);
+
     }
 
     @Override
@@ -100,9 +109,14 @@ public class RemindActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                finish();
-                break;
+                // app icon in Action Bar clicked; go home
+                Intent intent = new Intent(this, MainActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
         }
-        return true;
+
     }
 }

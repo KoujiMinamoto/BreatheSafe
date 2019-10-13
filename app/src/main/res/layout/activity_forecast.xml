@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+<android.support.constraint.ConstraintLayout
     android:id="@+id/activity_forecast"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -26,28 +30,11 @@
         android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="80dp"
         android:background="@color/white"
-        tools:layout_editor_absoluteX="139dp"
-        tools:layout_editor_absoluteY="343dp">
+        app:layout_constraintTop_toBottomOf="@+id/spinner"
+        tools:layout_editor_absoluteX="139dp">
 
-
-        <CheckBox
-            android:id="@+id/checkbox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="70dp"
-            android:layout_marginLeft="70dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="70dp"
-            android:layout_marginRight="70dp"
-            android:buttonTint="@color/cardview_dark_background"
-            android:checked="false"
-            android:gravity="center"
-            android:text="Forecast(default today)"
-            android:textColor="#03A9F4"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
         <LinearLayout
             android:layout_width="1000px"
@@ -71,42 +58,42 @@
     <TextView
         android:id="@+id/showairq"
         android:layout_width="120dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="550dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="570dp"
         android:layout_marginEnd="50dp"
         android:layout_marginRight="50dp"
-        android:background="#009688"
-        android:drawableTop="@drawable/pm"
+
+        android:drawableTop="@drawable/airpng"
         android:gravity="center"
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/showPressure"
         android:layout_width="120dp"
-        android:layout_height="60dp"
+        android:layout_height="80dp"
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="20dp"
-        android:background="#FF9800"
-        android:drawableTop="@drawable/pre"
+
+        android:drawableTop="@drawable/pressurepng"
         android:gravity="center"
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/colorPrimaryDark"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/showtemperature" />
 
     <TextView
         android:id="@+id/showHumidity"
         android:layout_width="120dp"
-        android:layout_height="60dp"
+        android:layout_height="80dp"
         android:layout_marginTop="470dp"
         android:layout_marginEnd="50dp"
         android:layout_marginRight="50dp"
-        android:background="@color/colorPrimary"
-        android:drawableTop="@drawable/hum"
+
+        android:drawableTop="@drawable/humpng"
         android:gravity="center"
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -114,14 +101,14 @@
     <TextView
         android:id="@+id/showtemperature"
         android:layout_width="120dp"
-        android:layout_height="60dp"
+        android:layout_height="80dp"
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="470dp"
-        android:background="#F44336"
-        android:drawableTop="@drawable/ic_info_outline_black_24dp"
+
+        android:drawableTop="@drawable/tempng"
         android:gravity="center"
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/red"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -135,25 +122,69 @@
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
         android:background="@drawable/textview_border"
-        android:gravity="center"
         android:textColor="@color/black"
+        android:gravity="center|left|left"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/choosebox"
+        android:layout_width="90dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/textview_border"
+        android:gravity="center"
+        android:text="Today"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/choosebox2"
+        android:layout_width="90dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/textview_border"
+        android:gravity="center"
+        android:text="Next 3 days"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/choosebox"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/showtips"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:drawableLeft="@drawable/ic_tip"
+        android:gravity="left"
+        android:textColor="#616161"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showadress" />
+
+    <TextView
         android:id="@+id/showadress1"
         android:layout_width="192dp"
         android:layout_height="42dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="46dp"
         android:background="@color/white"
         android:gravity="center"
         android:text="Select your work location"
         android:textColor="@color/black"
+        android:textStyle="normal|bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 
 </android.support.constraint.ConstraintLayout>
+</ScrollView>

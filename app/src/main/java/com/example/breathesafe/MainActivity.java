@@ -1,11 +1,12 @@
 package com.example.breathesafe;
-
+import android.content.SharedPreferences;
 import android.app.Fragment;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.os.Vibrator;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.NavigationView;
@@ -17,6 +18,8 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -45,11 +48,14 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
     private Context mContext = MainActivity.this;
+    SharedPreferences preferences;
     private TextView mTextMessage;
     private Button btn_for;
     private Button btn_tip;
-    private Button btn_sys;
+    private Button btn_act;
     private Button btn_med;
+    private Button btn_em;
+    public CallingRestful callapi;
     @BindView(R.id.recyclerView)
     RecyclerView mRecyclerView;
     @BindView(R.id.carousel)
@@ -58,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btn_homepage;
     private Button btn_prototype;
     private Button btn_setting;
-    private Integer[] imageUrl = {R.drawable.img1, R.drawable.img2, R.drawable.img3, R.drawable.img4,R.drawable.img5};
+    private Integer[] imageUrl = {R.drawable.img1, R.drawable.img2, R.drawable.img3, R.drawable.img3,R.drawable.img5};
     private int[] imageIds = {R.drawable.forecast, R.drawable.sys,
             R.drawable.tips, R.drawable.act,R.drawable.med};
     private List<Subject> datas = new ArrayList<>();
@@ -85,6 +91,25 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
+
+        //读取SharedPreferences中需要的数据
+        preferences = getSharedPreferences("count",MODE_PRIVATE);
+        preferences = getSharedPreferences("Uid",MODE_PRIVATE);
+        int count = preferences.getInt("count",0);
+
+//判断程序与第几次运行，如果是第一次运行则跳转到引导页面
+        if (count ==0) {
+            MainActivity.this.finish();
+            //跳转到主界面，登录成功的状态传递到 MainActivity 中
+            startActivity(new Intent(MainActivity.this, Firsttime.class));
+}
+
+
+
+
+
         List<Integer> imgUrls = Arrays.asList(imageUrl);
 
         Banner banner = (Banner) findViewById(R.id.carousel);
@@ -125,8 +150,10 @@ public class MainActivity extends AppCompatActivity {
         //mRecyclerView.setLayoutManager(new GridLayoutManager(this, 5));
         btn_for = findViewById(R.id.forecast);
         btn_tip = findViewById(R.id.tips);
-        btn_sys = findViewById(R.id.symptoms);
-        btn_med = findViewById(R.id.forecast4);
+        btn_act = findViewById(R.id.actionplan);
+        btn_med = findViewById(R.id.forecast2);
+        btn_em = findViewById(R.id.emergency);
+
 
 
         //back home page
@@ -173,12 +200,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btn_sys.setOnClickListener(new View.OnClickListener() {
+        btn_act.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 MainActivity.this.finish();
                 //跳转到主界面，登录成功的状态传递到 MainActivity 中
-                startActivity(new Intent(MainActivity.this, Forecast.class));
+                startActivity(new Intent(MainActivity.this, ActActivity.class));
 
 
 
@@ -191,6 +218,21 @@ public class MainActivity extends AppCompatActivity {
                 //跳转到主界面，登录成功的状态传递到 MainActivity 中
                 startActivity(new Intent(MainActivity.this, RemindActivity.class));
 
+
+
+            }
+        });
+        btn_em.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                Thread name = new Thread(NameOfRunnable);
+//                name.start();
+                MainActivity.this.finish();
+                //跳转到主界面，登录成功的状态传递到 MainActivity 中
+                startActivity(new Intent(MainActivity.this, Howfeeling.class));
+                //callapi.postredzone(3, "dad","dada","dada","dada");
+                //callapi.postUser(99,"test","test","test","test","test",99,99);
+//                callapi.postno(3,"red",3);
 
 
             }
@@ -348,4 +390,30 @@ public class MainActivity extends AppCompatActivity {
         mItemTouchHelper.attachToRecyclerView(mRecyclerView);
     }
 
+
+    public Runnable NameOfRunnable = new Runnable()
+    {
+        @Override
+        public void run()
+        {
+            if (true)
+            {
+                // TODO add code to refresh in background
+                try
+                {
+
+                    Thread.sleep(1000);// sleeps 1 second
+                    callapi.postno(3,"red",3);
+                    //callapi.postredzone(3, "dad","dada","dada","dada");
+                    //callapi.postUser(3,"test","test","test","test","test",1,1);
+                }
+                catch (InterruptedException e)
+                {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+            }
+
+        }
+    };
 }

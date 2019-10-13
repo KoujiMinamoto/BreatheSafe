@@ -4,8 +4,11 @@
     package="com.example.breathesafe">
 
 
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
     <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.VIBRATE" /> <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/><!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/><!-- 这个权限用于进行gps定位 -->
 
     <!-- if you want to load images from a file OR from the internet -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -16,6 +19,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity
             android:name=".home_drawer"
             android:label="@string/title_activity_home_drawer"
@@ -23,11 +27,23 @@
         <activity android:name=".Forecast"
             android:label="@string/title_for"
             android:parentActivityName=".MainActivity"/>
+        <activity android:name=".Howfeeling"
+            android:label="My feelings"
+            android:parentActivityName=".MainActivity"/>
         <activity android:name=".RemindActivity"
             android:label="Medication"
             android:parentActivityName=".MainActivity"/>
+        <activity android:name=".Firsttime"
+            android:label=""
+            android:parentActivityName=".MainActivity"/>
         <activity android:name=".AddAlarmActivity"
-            android:label="Medication"
+            android:label="My Medications"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".AddActActivity"
+            android:label="ActionPlan"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".ActActivity"
+            android:label="ActionPlan"
             android:parentActivityName=".MainActivity"/>
         <activity android:name=".Tips"
             android:label="@string/title_tips"
@@ -44,8 +60,11 @@
         <activity android:name=".Hum"
             android:label="Humidity"
             android:parentActivityName=".Tips"/>
+        <activity android:name=".Forecast1"
+            android:label="Forecast"
+            android:parentActivityName=".Tips"/>
         <activity
-            android:name=".MainActivity"
+            android:name=".Welcome"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -54,6 +73,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity"
+            android:label="@string/app_name">
+        </activity>
+
+        <receiver android:name=".Alarm" />
+        <receiver android:name=".Utils.AlarmReceiver">
+            <intent-filter>
+                <action android:name="com.example.breathesafe.TIMER_ACTION_REPEATING" />
+                <action android:name="com.example.breathesafe.TIMER_ACTION" />
+            </intent-filter>
+        </receiver>
+
     </application>
 
 

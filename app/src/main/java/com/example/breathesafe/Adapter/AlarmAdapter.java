@@ -18,26 +18,34 @@ public class AlarmAdapter extends BaseQuickAdapter<AlarmDB, BaseViewHolder> {
     @Override
     protected void convert(BaseViewHolder helper, AlarmDB item) {
         StringBuilder builder = new StringBuilder();
+        StringBuilder builder2 = new StringBuilder();
+        StringBuilder builder3 = new StringBuilder();
+        StringBuilder builder4 = new StringBuilder();
         builder.append(item.getHourNum()).append(":").append(item.getMinNum());
-        helper.setText(R.id.tv_medname, builder.toString());
+        builder2.append(item.getAlarmName());
+        builder3.append(item.getDosage());
+        builder4.append(item.getForm());
+        helper.setText(R.id.tv_medname, "Medication Name："+builder2.toString());
+        helper.setText(R.id.tv_dos,"Dosage："+builder3.toString());
+        helper.setText(R.id.tv_form,"Form："+builder4.toString());
         helper.setText(R.id.tv_medtime, builder.toString());
         switch (item.getCycleNum()) {
             case 0:
-                helper.setText(R.id.tv_count, "everyday");
+                helper.setText(R.id.tv_count, "Repeating:everyday");
                 break;
             case -1:
-                helper.setText(R.id.tv_count, "one time");
+                helper.setText(R.id.tv_count, "Repeating:one time");
                 break;
         }
         helper.addOnClickListener(R.id.layout_public);
         helper.addOnLongClickListener(R.id.layout_public);
-        helper.setChecked(R.id.switchButton, item.isEnabled());
-        Switch view = helper.getView(R.id.switchButton);
-        view.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                Toast.makeText(MyApp.getContext(), "" + isChecked, Toast.LENGTH_SHORT).show();
-            }
-        });
+//        helper.setChecked(R.id.switchButton, item.isEnabled());
+//        Switch view = helper.getView(R.id.switchButton);
+//        view.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+//            @Override
+//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+//                Toast.makeText(MyApp.getContext(), "" + isChecked, Toast.LENGTH_SHORT).show();
+//            }
+//        });
     }
 }
