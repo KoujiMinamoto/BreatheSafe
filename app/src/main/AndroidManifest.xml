@@ -42,6 +42,9 @@
         <activity android:name=".AddActActivity"
             android:label="ActionPlan"
             android:parentActivityName=".MainActivity"/>
+        <activity android:name=".AddActActivity1"
+            android:label="ActionPlan"
+            android:parentActivityName=".MainActivity"/>
         <activity android:name=".ActActivity"
             android:label="ActionPlan"
             android:parentActivityName=".MainActivity"/>

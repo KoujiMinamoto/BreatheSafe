@@ -43,7 +43,7 @@ public class AddActActivity extends AppCompatActivity implements View.OnClickLis
     Button set_btnforact;
 //    @BindView(R.id.all_layout)
 //    LinearLayout allLayout;
-
+    SharedPreferences preferences;
     private TimePickerView pvTime;
     private EditText et_greenrename;
     private EditText et_greenredosage;
@@ -116,7 +116,7 @@ public class AddActActivity extends AppCompatActivity implements View.OnClickLis
 //                MainActivity.this.finish();
 //                //跳转到主界面，登录成功的状态传递到 MainActivity 中
 //                startActivity(new Intent(MainActivity.this, ActActivity.class));
-                LitePal.deleteAll(ActDB.class);
+                //LitePal.deleteAll(ActDB.class);
                 setClock();
 
 
@@ -216,35 +216,35 @@ public class AddActActivity extends AppCompatActivity implements View.OnClickLis
         et_greenconfrequency = findViewById(R.id.et_greenconfrequency);
         greenconfrequency = et_greenconfrequency.getText().toString().trim();
 
-        et_yellowrename = findViewById(R.id.et_yellowrename);
-        yellowrename = et_yellowrename.getText().toString().trim();
-        et_yellowredosage = findViewById(R.id.et_yellowredosage);
-        yellowredosage = et_yellowredosage.getText().toString().trim();
-        et_yellowreform = findViewById(R.id.et_yellowreform);
-        yellowreform = et_yellowreform.getText().toString().trim();
-        et_yellowrefrequency = findViewById(R.id.et_yellowrefrequency);
-        yellowrefrequency = et_yellowrefrequency.getText().toString().trim();
+//        et_yellowrename = findViewById(R.id.et_yellowrename);
+//        yellowrename = et_yellowrename.getText().toString().trim();
+//        et_yellowredosage = findViewById(R.id.et_yellowredosage);
+//        yellowredosage = et_yellowredosage.getText().toString().trim();
+//        et_yellowreform = findViewById(R.id.et_yellowreform);
+//        yellowreform = et_yellowreform.getText().toString().trim();
+//        et_yellowrefrequency = findViewById(R.id.et_yellowrefrequency);
+//        yellowrefrequency = et_yellowrefrequency.getText().toString().trim();
+//
+//        et_yellowconname = findViewById(R.id.et_yellowconname);
+//        yellowconname = et_yellowconname.getText().toString().trim();
+//        et_yellowcondosage = findViewById(R.id.et_yellowcondosage);
+//        yellowcondosage = et_yellowcondosage.getText().toString().trim();
+//        et_yellowconform = findViewById(R.id.et_yellowconform);
+//        yellowconform = et_yellowconform.getText().toString().trim();
+//        et_yellowconfrequency = findViewById(R.id.et_yellowconfrequency);
+//        yellowconfrequency = et_yellowconfrequency.getText().toString().trim();
+//
+//        et_redrename = findViewById(R.id.et_redrename);
+//        redrename = et_redrename.getText().toString().trim();
+//        et_redredosage = findViewById(R.id.et_redredosage);
+//        redredosage = et_redredosage.getText().toString().trim();
+//        et_redreform = findViewById(R.id.et_redreform);
+//        redreform = et_redreform.getText().toString().trim();
+//        et_redrefrequency = findViewById(R.id.et_redrefrequency);
+//        redrefrequency = et_redrefrequency.getText().toString().trim();
 
-        et_yellowconname = findViewById(R.id.et_yellowconname);
-        yellowconname = et_yellowconname.getText().toString().trim();
-        et_yellowcondosage = findViewById(R.id.et_yellowcondosage);
-        yellowcondosage = et_yellowcondosage.getText().toString().trim();
-        et_yellowconform = findViewById(R.id.et_yellowconform);
-        yellowconform = et_yellowconform.getText().toString().trim();
-        et_yellowconfrequency = findViewById(R.id.et_yellowconfrequency);
-        yellowconfrequency = et_yellowconfrequency.getText().toString().trim();
 
-        et_redrename = findViewById(R.id.et_redrename);
-        redrename = et_redrename.getText().toString().trim();
-        et_redredosage = findViewById(R.id.et_redredosage);
-        redredosage = et_redredosage.getText().toString().trim();
-        et_redreform = findViewById(R.id.et_redreform);
-        redreform = et_redreform.getText().toString().trim();
-        et_redrefrequency = findViewById(R.id.et_redrefrequency);
-        redrefrequency = et_redrefrequency.getText().toString().trim();
-
-
-        if(TextUtils.isEmpty(greenrename)||TextUtils.isEmpty(greenredosage)||TextUtils.isEmpty(redrefrequency)){
+        if(TextUtils.isEmpty(greenrename)||TextUtils.isEmpty(greenredosage)){
             Toast.makeText(AddActActivity.this, "Please input Something", Toast.LENGTH_SHORT).show();
             return;
 
@@ -294,7 +294,7 @@ public class AddActActivity extends AppCompatActivity implements View.OnClickLis
 //            }
 
             ActDB actDB = new ActDB();
-            actDB.setActID(actID+1);
+            actDB.setActID(actID);
             actDB.setGreenrename(greenrename);
             actDB.setGreenredosage(greenredosage);
             actDB.setGreenreform(greenreform);
@@ -303,22 +303,22 @@ public class AddActActivity extends AppCompatActivity implements View.OnClickLis
             actDB.setGreencondosage(greencondosage);
             actDB.setGreenconform(greenconform);
             actDB.setGreenconfrequency(greenconfrequency);
-            actDB.setYellowrename(yellowrename);
-            actDB.setYellowredosage(yellowredosage);
-            actDB.setYellowreform(yellowreform);
-            actDB.setYellowrefrequency(yellowrefrequency);
-            actDB.setYellowconname(yellowconname);
-            actDB.setYellowcondosage(yellowcondosage);
-            actDB.setYellowconform(yellowconform);
-            actDB.setYellowconfrequency(yellowconfrequency);
-            actDB.setRedrename(redrename);
-            actDB.setRedredosage(redredosage);
-            actDB.setRedreform(redreform);
-            actDB.setRedrefrequency(redrefrequency);
+//            actDB.setYellowrename(yellowrename);
+//            actDB.setYellowredosage(yellowredosage);
+//            actDB.setYellowreform(yellowreform);
+//            actDB.setYellowrefrequency(yellowrefrequency);
+//            actDB.setYellowconname(yellowconname);
+//            actDB.setYellowcondosage(yellowcondosage);
+//            actDB.setYellowconform(yellowconform);
+//            actDB.setYellowconfrequency(yellowconfrequency);
+//            actDB.setRedrename(redrename);
+//            actDB.setRedredosage(redredosage);
+//            actDB.setRedreform(redreform);
+//            actDB.setRedrefrequency(redrefrequency);
             actDB.save();
 
-            Thread name = new Thread(NameOfRunnable);
-            name.start();
+//            Thread name = new Thread(NameOfRunnable);
+//            name.start();
 
             //int uid = preferences.getInt("Uid",0);
 
@@ -337,10 +337,33 @@ public class AddActActivity extends AppCompatActivity implements View.OnClickLis
 //                alarmDB.setEnabled(true);
 //                alarmDB.save();
 
-            Intent intent = new Intent();
-            setResult(1, intent);
-            finish();
-            Toast.makeText(this, "Setting Successful", Toast.LENGTH_LONG).show();
+//            Intent intent = new Intent();
+////            setResult(1, intent);
+////            finish();
+////            Toast.makeText(this, "Setting Successful", Toast.LENGTH_LONG).show();
+//            preferences = getSharedPreferences("greenrename",MODE_PRIVATE);
+//            preferences = getSharedPreferences("greenredosage",MODE_PRIVATE);
+//            preferences = getSharedPreferences("greenreform",MODE_PRIVATE);
+//            preferences = getSharedPreferences("greenrefrequency",MODE_PRIVATE);
+//            preferences = getSharedPreferences("greenconname",MODE_PRIVATE);
+//            preferences = getSharedPreferences("greencondosage",MODE_PRIVATE);
+//            preferences = getSharedPreferences("greenconform",MODE_PRIVATE);
+            preferences = getSharedPreferences("greenconfrequency",MODE_PRIVATE);
+            SharedPreferences.Editor editor = preferences.edit();
+            editor.putString("greenrename",greenrename);
+            editor.putString("greenredosage",greenredosage);
+            editor.putString("greenreform",greenreform);
+            editor.putString("greenrefrequency",greenrefrequency);
+            editor.putString("greenconname",greenconname);
+            editor.putString("greencondosage",greencondosage);
+            editor.putString("greenconform",greenconform);
+            editor.putString("greenconfrequency",greenconfrequency);
+
+            editor.commit();
+            Intent data = new Intent();
+            data.putExtra("userName", actID);
+            setResult(RESULT_OK, data);
+            startActivity( new Intent( AddActActivity.this,AddActActivity1.class ) );
 
 
     }}
