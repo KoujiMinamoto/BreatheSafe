@@ -16,11 +16,15 @@
     >
 
 
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
     <TextView
         android:id="@+id/textView10"
         android:layout_width="350dp"
         android:layout_height="30dp"
-        android:background="#ff9800"
+        android:background="@drawable/bc2"
         android:gravity="center"
         android:text="Yellow Zone"
         android:textColor="@color/white"/>
@@ -121,7 +125,7 @@
         android:id="@+id/textView13"
         android:layout_width="350dp"
         android:layout_height="30dp"
-        android:background="@color/red"
+        android:background="@drawable/bc3"
         android:gravity="center"
         android:text="Red Zone"
         android:textColor="@color/white"/>

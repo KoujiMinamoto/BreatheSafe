@@ -16,13 +16,17 @@
     >
 
 
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
     <TextView
         android:id="@+id/textView9"
         android:layout_width="350dp"
         android:layout_height="30dp"
         android:gravity="center"
         android:text="Green Zone"
-        android:background="#4caf50"
+        android:background="@drawable/bc1"
         android:textColor="@color/white"
         />
 

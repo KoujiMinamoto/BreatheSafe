@@ -22,7 +22,7 @@
         android:layout_height="30dp"
         android:background="#4caf50"
         android:gravity="center"
-        android:text="How are you feeling?(0-9 low to high)"
+        android:text="How are you feeling?(0-2(low,medium,high))"
         android:textColor="@color/white" />
 
     <TextView
@@ -42,7 +42,7 @@
         android:ems="10"
         android:gravity="left"
 
-        android:hint="0-2(low,medium,high)"
+        android:hint="0-2"
         android:inputType="numberDecimal"
 
         tools:layout_editor_absoluteX="83dp"
@@ -66,7 +66,7 @@
         android:layout_width="80dp"
         android:layout_height="wrap_content"
 
-        android:hint="0-2(low,medium,high)"
+        android:hint="0-2"
         android:inputType="numberDecimal"
         android:gravity="left"/>
 
@@ -86,7 +86,7 @@
         android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:gravity="left"
-        android:hint="0-2(low,medium,high)"
+        android:hint="0-2"
 
         android:inputType="numberDecimal" />
 
@@ -105,7 +105,7 @@
         android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:gravity="left"
-        android:hint="0-2(low,medium,high)"
+        android:hint="0-2"
 
         android:inputType="numberDecimal" />
 
@@ -124,7 +124,7 @@
         android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:gravity="left"
-        android:hint="0-2(low,medium,high)"
+        android:hint="0-2"
 
         android:inputType="numberDecimal" />
 
