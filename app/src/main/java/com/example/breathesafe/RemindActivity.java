@@ -104,7 +104,6 @@ public class RemindActivity extends AppCompatActivity {
             initDB();
         }
     }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -119,4 +118,5 @@ public class RemindActivity extends AppCompatActivity {
         }
 
     }
+
 }

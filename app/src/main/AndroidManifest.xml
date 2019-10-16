@@ -31,7 +31,7 @@
             android:label="My feelings"
             android:parentActivityName=".MainActivity"/>
         <activity android:name=".RemindActivity"
-            android:label="Medication"
+            android:label="Medication Reminders"
             android:parentActivityName=".MainActivity"/>
         <activity android:name=".Firsttime"
             android:label=""

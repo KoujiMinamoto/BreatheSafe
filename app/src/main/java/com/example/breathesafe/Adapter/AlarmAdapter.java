@@ -31,10 +31,10 @@ public class AlarmAdapter extends BaseQuickAdapter<AlarmDB, BaseViewHolder> {
         helper.setText(R.id.tv_medtime, builder.toString());
         switch (item.getCycleNum()) {
             case 0:
-                helper.setText(R.id.tv_count, "Repeating:everyday");
+                helper.setText(R.id.tv_count, "Repeat:Everyday");
                 break;
             case -1:
-                helper.setText(R.id.tv_count, "Repeating:one time");
+                helper.setText(R.id.tv_count, "Repeat:One Time");
                 break;
         }
         helper.addOnClickListener(R.id.layout_public);

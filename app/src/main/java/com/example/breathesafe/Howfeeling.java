@@ -52,6 +52,7 @@ public class Howfeeling extends AppCompatActivity {
     private int a5;
     private  String color;
     public CallingRestful callapi;
+    private boolean isok = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,13 +82,14 @@ public class Howfeeling extends AppCompatActivity {
 //                startActivity(new Intent(MainActivity.this, ActActivity.class));
                 //LitePal.deleteAll(ActDB.class);
                 setClock();
+                if (isok=true){
                 Toast.makeText(getApplicationContext(),"Successfully shared with your admin",Toast.LENGTH_LONG).show();
                 Howfeeling.this.finish();
 
                 //跳转到主界面，登录成功的状态传递到 MainActivity 中
                 startActivity(new Intent(Howfeeling.this, MainActivity.class));
 
-            }
+            }}
         });
 
     }
@@ -117,7 +119,9 @@ public class Howfeeling extends AppCompatActivity {
         a3 = Integer.valueOf(et_3.getText().toString().trim());
         a4 = Integer.valueOf(et_4.getText().toString().trim());
         a5 = Integer.valueOf(et_5.getText().toString().trim());
-        if (a1>1 || a2>1 || a3>1 || a4>1 || a5>1)
+        if (IsNumber(Integer.toString(a1))==true&&IsNumber(Integer.toString(a2))==true&&IsNumber(Integer.toString(a3))==true&&IsNumber(Integer.toString(a4))==true&&IsNumber(Integer.toString(a5))==true){
+        isok=true;
+            if (a1>1 || a2>1 || a3>1 || a4>1 || a5>1)
         {
             color = "red";
             Thread name = new Thread(NameOfRunnable);
@@ -134,6 +138,11 @@ public class Howfeeling extends AppCompatActivity {
             color = "yellow";
             Thread name = new Thread(NameOfRunnable);
             name.start();
+        }}
+        else
+        {
+            isok=true;
+            Toast.makeText(getApplicationContext(),"Input should in 0-2",Toast.LENGTH_LONG).show();
         }
 //        Thread name = new Thread(NameOfRunnable);
 //        name.start();
@@ -141,6 +150,10 @@ public class Howfeeling extends AppCompatActivity {
 
 
 
+    }
+    public static boolean IsNumber(String str) {
+        //String regex = "^[0-9]*$";
+        return str.matches("^[0-2]{1}$");
     }
     public Runnable NameOfRunnable = new Runnable()
     {

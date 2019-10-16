@@ -75,9 +75,8 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:gravity="left"
-
+        android:inputType="textEmailAddress"
         android:hint="Email"
-
         tools:layout_editor_absoluteX="83dp"
         tools:layout_editor_absoluteY="158dp"
         />

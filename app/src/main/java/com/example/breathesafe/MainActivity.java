@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btn_homepage;
     private Button btn_prototype;
     private Button btn_setting;
-    private Integer[] imageUrl = {R.drawable.img1, R.drawable.img2, R.drawable.img3, R.drawable.img3,R.drawable.img5};
+    private Integer[] imageUrl = {R.drawable.img1, R.drawable.img2, R.drawable.img3, R.drawable.img1,R.drawable.img5};
     private int[] imageIds = {R.drawable.forecast, R.drawable.sys,
             R.drawable.tips, R.drawable.act,R.drawable.med};
     private List<Subject> datas = new ArrayList<>();
@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
         //设置自动轮播，默认为true
         banner.isAutoPlay(true);
         //设置轮播时间
-        banner.setDelayTime(6500);
+        banner.setDelayTime(7000);
         //设置指示器位置（当banner模式中有指示器时）
         banner.setIndicatorGravity(BannerConfig.CENTER);
         //banner设置方法全部调用完毕时最后调用

@@ -16,14 +16,22 @@
     >
 
 
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
     <TextView
         android:id="@+id/textView9"
         android:layout_width="350dp"
-        android:layout_height="30dp"
-        android:background="#4caf50"
+        android:layout_height="50dp"
+        android:background="@drawable/bc4"
         android:gravity="center"
-        android:text="How are you feeling?(0-2(low,medium,high))"
+        android:text="How are you feeling? \n(0-low, 1-medium, 2-high)"
         android:textColor="@color/white" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
 
     <TextView
         android:id="@+id/textView23"
@@ -41,6 +49,8 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:gravity="left"
+        android:digits="012"
+        android:maxLength="3"
 
         android:hint="0-2"
         android:inputType="numberDecimal"
@@ -65,7 +75,8 @@
         android:id="@+id/et_2"
         android:layout_width="80dp"
         android:layout_height="wrap_content"
-
+        android:digits="012"
+        android:maxLength="3"
         android:hint="0-2"
         android:inputType="numberDecimal"
         android:gravity="left"/>
@@ -87,7 +98,8 @@
         android:layout_height="wrap_content"
         android:gravity="left"
         android:hint="0-2"
-
+        android:digits="012"
+        android:maxLength="3"
         android:inputType="numberDecimal" />
 
     <TextView
@@ -106,6 +118,8 @@
         android:layout_height="wrap_content"
         android:gravity="left"
         android:hint="0-2"
+        android:digits="012"
+        android:maxLength="3"
 
         android:inputType="numberDecimal" />
 
@@ -125,7 +139,8 @@
         android:layout_height="wrap_content"
         android:gravity="left"
         android:hint="0-2"
-
+        android:digits="012"
+        android:maxLength="3"
         android:inputType="numberDecimal" />
 
     <Button
